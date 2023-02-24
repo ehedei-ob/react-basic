@@ -1,5 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { Contact } from "./models/contact.model";
+import ComponentA from "./components/ComponentA";
+
+const contact = new Contact(
+  "Wilson",
+  "Parker",
+  "wilson_parker@email.com",
+  true
+);
 
 function App() {
   return (
@@ -17,6 +26,7 @@ function App() {
         >
           Learn React
         </a>
+        <ComponentA contact={contact}></ComponentA>
       </header>
     </div>
   );
